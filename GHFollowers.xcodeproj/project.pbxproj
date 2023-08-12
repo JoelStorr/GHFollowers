@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		4088C0742A87833400A0EFB6 /* GFButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4088C0732A87833400A0EFB6 /* GFButton.swift */; };
+		4088C0762A87884400A0EFB6 /* GFtexField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4088C0752A87884400A0EFB6 /* GFtexField.swift */; };
 		409D97972A864273007DA114 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 409D97962A864273007DA114 /* AppDelegate.swift */; };
 		409D97992A864273007DA114 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 409D97982A864273007DA114 /* SceneDelegate.swift */; };
 		409D97A02A864276007DA114 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 409D979F2A864276007DA114 /* Assets.xcassets */; };
@@ -18,6 +19,7 @@
 
 /* Begin PBXFileReference section */
 		4088C0732A87833400A0EFB6 /* GFButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GFButton.swift; sourceTree = "<group>"; };
+		4088C0752A87884400A0EFB6 /* GFtexField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GFtexField.swift; sourceTree = "<group>"; };
 		409D97932A864273007DA114 /* GHFollowers.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GHFollowers.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		409D97962A864273007DA114 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		409D97982A864273007DA114 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -66,6 +68,7 @@
 				409D97AA2A867B76007DA114 /* SearchVC.swift */,
 				409D97AC2A867BC5007DA114 /* FavoritesListVC.swift */,
 				4088C0732A87833400A0EFB6 /* GFButton.swift */,
+				4088C0752A87884400A0EFB6 /* GFtexField.swift */,
 			);
 			path = GHFollowers;
 			sourceTree = "<group>";
@@ -141,6 +144,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				409D97AD2A867BC5007DA114 /* FavoritesListVC.swift in Sources */,
+				4088C0762A87884400A0EFB6 /* GFtexField.swift in Sources */,
 				4088C0742A87833400A0EFB6 /* GFButton.swift in Sources */,
 				409D97AB2A867B76007DA114 /* SearchVC.swift in Sources */,
 				409D97972A864273007DA114 /* AppDelegate.swift in Sources */,
