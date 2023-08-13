@@ -15,6 +15,7 @@
 		409D97A32A864276007DA114 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 409D97A12A864276007DA114 /* LaunchScreen.storyboard */; };
 		409D97AB2A867B76007DA114 /* SearchVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 409D97AA2A867B76007DA114 /* SearchVC.swift */; };
 		409D97AD2A867BC5007DA114 /* FavoritesListVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 409D97AC2A867BC5007DA114 /* FavoritesListVC.swift */; };
+		40BB70322A88D51400E61630 /* FollowerListVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40BB70312A88D51400E61630 /* FollowerListVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		409D97A42A864276007DA114 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		409D97AA2A867B76007DA114 /* SearchVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchVC.swift; sourceTree = "<group>"; };
 		409D97AC2A867BC5007DA114 /* FavoritesListVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesListVC.swift; sourceTree = "<group>"; };
+		40BB70312A88D51400E61630 /* FollowerListVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FollowerListVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,6 +71,7 @@
 				409D97AC2A867BC5007DA114 /* FavoritesListVC.swift */,
 				4088C0732A87833400A0EFB6 /* GFButton.swift */,
 				4088C0752A87884400A0EFB6 /* GFtexField.swift */,
+				40BB70312A88D51400E61630 /* FollowerListVC.swift */,
 			);
 			path = GHFollowers;
 			sourceTree = "<group>";
@@ -147,6 +150,7 @@
 				4088C0762A87884400A0EFB6 /* GFtexField.swift in Sources */,
 				4088C0742A87833400A0EFB6 /* GFButton.swift in Sources */,
 				409D97AB2A867B76007DA114 /* SearchVC.swift in Sources */,
+				40BB70322A88D51400E61630 /* FollowerListVC.swift in Sources */,
 				409D97972A864273007DA114 /* AppDelegate.swift in Sources */,
 				409D97992A864273007DA114 /* SceneDelegate.swift in Sources */,
 			);

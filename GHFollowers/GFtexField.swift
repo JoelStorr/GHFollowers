@@ -41,6 +41,8 @@ class GFtexField: UITextField {
         
         placeholder = "Enter a username"
         
+        returnKeyType = .go
+        
     }
     
     

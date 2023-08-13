@@ -24,6 +24,7 @@ class SearchVC: UIViewController {
         configureLogoImageView()
         configureTextField()
         configureCallToActionButton()
+        createDismissKeyboardTapGesture()
     }
     
     
@@ -33,6 +34,24 @@ class SearchVC: UIViewController {
         //Makes sure the Nav bar stays hidden
         navigationController?.isNavigationBarHidden = true
     }
+    
+    func createDismissKeyboardTapGesture (){
+        let tap = UITapGestureRecognizer(target: self.view, action: #selector(UIView.endEditing))
+        view.addGestureRecognizer(tap)
+        
+    }
+    
+    @objc func pushFollowerListVC(){
+        let followerListVC = FollowerListVC()
+        followerListVC.username = usernameTextField.text
+        followerListVC.title = usernameTextField.text
+        
+        navigationController?.pushViewController(followerListVC, animated: true)
+        
+    }
+    
+    
+    
     
     
     func configureLogoImageView(){
@@ -56,6 +75,9 @@ class SearchVC: UIViewController {
     func configureTextField(){
         view.addSubview(usernameTextField)
         
+        //Sets the Delegate
+        usernameTextField.delegate = self
+        
         NSLayoutConstraint.activate([
             usernameTextField.topAnchor.constraint(equalTo: logoImageView.bottomAnchor, constant: 48),
             usernameTextField.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 50),
@@ -69,6 +91,9 @@ class SearchVC: UIViewController {
     func configureCallToActionButton(){
         view.addSubview(callToActionButton)
         
+        callToActionButton.addTarget(self, action: #selector(pushFollowerListVC), for: .touchUpInside)
+        
+        
         NSLayoutConstraint.activate([
             callToActionButton.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor, constant: -50),
             callToActionButton.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 50),
@@ -79,4 +104,13 @@ class SearchVC: UIViewController {
 
     
 
+}
+
+
+
+extension SearchVC: UITextFieldDelegate{
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        pushFollowerListVC()
+        return true
+    }
 }
