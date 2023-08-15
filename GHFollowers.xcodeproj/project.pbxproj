@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		40524A542A8BB0EE00383907 /* GFAlertVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40524A532A8BB0ED00383907 /* GFAlertVC.swift */; };
 		4088C0742A87833400A0EFB6 /* GFButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4088C0732A87833400A0EFB6 /* GFButton.swift */; };
 		4088C0762A87884400A0EFB6 /* GFtexField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4088C0752A87884400A0EFB6 /* GFtexField.swift */; };
 		409D97972A864273007DA114 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 409D97962A864273007DA114 /* AppDelegate.swift */; };
@@ -21,6 +22,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		40524A532A8BB0ED00383907 /* GFAlertVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GFAlertVC.swift; sourceTree = "<group>"; };
 		4088C0732A87833400A0EFB6 /* GFButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GFButton.swift; sourceTree = "<group>"; };
 		4088C0752A87884400A0EFB6 /* GFtexField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GFtexField.swift; sourceTree = "<group>"; };
 		409D97932A864273007DA114 /* GHFollowers.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GHFollowers.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -78,6 +80,7 @@
 				40BB70312A88D51400E61630 /* FollowerListVC.swift */,
 				40BB70332A88E7C400E61630 /* GFTitleLabel.swift */,
 				40BB70352A88EBA100E61630 /* GFBodyLabel.swift */,
+				40524A532A8BB0ED00383907 /* GFAlertVC.swift */,
 			);
 			path = GHFollowers;
 			sourceTree = "<group>";
@@ -156,6 +159,7 @@
 				4088C0762A87884400A0EFB6 /* GFtexField.swift in Sources */,
 				4088C0742A87833400A0EFB6 /* GFButton.swift in Sources */,
 				409D97AB2A867B76007DA114 /* SearchVC.swift in Sources */,
+				40524A542A8BB0EE00383907 /* GFAlertVC.swift in Sources */,
 				40BB70362A88EBA100E61630 /* GFBodyLabel.swift in Sources */,
 				40BB70342A88E7C400E61630 /* GFTitleLabel.swift in Sources */,
 				40BB70322A88D51400E61630 /* FollowerListVC.swift in Sources */,
