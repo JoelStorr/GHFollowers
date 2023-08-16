@@ -17,6 +17,8 @@
 		409D97A32A864276007DA114 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 409D97A12A864276007DA114 /* LaunchScreen.storyboard */; };
 		409D97AB2A867B76007DA114 /* SearchVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 409D97AA2A867B76007DA114 /* SearchVC.swift */; };
 		409D97AD2A867BC5007DA114 /* FavoritesListVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 409D97AC2A867BC5007DA114 /* FavoritesListVC.swift */; };
+		409FCE662A8CA8ED007EAA46 /* Follower.swift in Sources */ = {isa = PBXBuildFile; fileRef = 409FCE652A8CA8ED007EAA46 /* Follower.swift */; };
+		409FCE682A8CA967007EAA46 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 409FCE672A8CA967007EAA46 /* User.swift */; };
 		40BB70322A88D51400E61630 /* FollowerListVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40BB70312A88D51400E61630 /* FollowerListVC.swift */; };
 		40BB70342A88E7C400E61630 /* GFTitleLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40BB70332A88E7C400E61630 /* GFTitleLabel.swift */; };
 		40BB70362A88EBA100E61630 /* GFBodyLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40BB70352A88EBA100E61630 /* GFBodyLabel.swift */; };
@@ -35,6 +37,8 @@
 		409D97A42A864276007DA114 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		409D97AA2A867B76007DA114 /* SearchVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchVC.swift; sourceTree = "<group>"; };
 		409D97AC2A867BC5007DA114 /* FavoritesListVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesListVC.swift; sourceTree = "<group>"; };
+		409FCE652A8CA8ED007EAA46 /* Follower.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Follower.swift; sourceTree = "<group>"; };
+		409FCE672A8CA967007EAA46 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		40BB70312A88D51400E61630 /* FollowerListVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FollowerListVC.swift; sourceTree = "<group>"; };
 		40BB70332A88E7C400E61630 /* GFTitleLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GFTitleLabel.swift; sourceTree = "<group>"; };
 		40BB70352A88EBA100E61630 /* GFBodyLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GFBodyLabel.swift; sourceTree = "<group>"; };
@@ -112,12 +116,22 @@
 		409D97952A864273007DA114 /* GHFollowers */ = {
 			isa = PBXGroup;
 			children = (
+				409FCE642A8CA8CE007EAA46 /* Model */,
 				4044A9A22A8C141600141458 /* Support */,
 				4044A9A12A8C13D000141458 /* Extension */,
 				4044A9A02A8C13A200141458 /* Custom Views */,
 				4044A99F2A8C136B00141458 /* Screens */,
 			);
 			path = GHFollowers;
+			sourceTree = "<group>";
+		};
+		409FCE642A8CA8CE007EAA46 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				409FCE652A8CA8ED007EAA46 /* Follower.swift */,
+				409FCE672A8CA967007EAA46 /* User.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -190,6 +204,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				409FCE682A8CA967007EAA46 /* User.swift in Sources */,
 				409D97AD2A867BC5007DA114 /* FavoritesListVC.swift in Sources */,
 				4088C0762A87884400A0EFB6 /* GFtexField.swift in Sources */,
 				4088C0742A87833400A0EFB6 /* GFButton.swift in Sources */,
@@ -197,6 +212,7 @@
 				409D97AB2A867B76007DA114 /* SearchVC.swift in Sources */,
 				40524A542A8BB0EE00383907 /* GFAlertVC.swift in Sources */,
 				40BB70362A88EBA100E61630 /* GFBodyLabel.swift in Sources */,
+				409FCE662A8CA8ED007EAA46 /* Follower.swift in Sources */,
 				40BB70342A88E7C400E61630 /* GFTitleLabel.swift in Sources */,
 				40BB70322A88D51400E61630 /* FollowerListVC.swift in Sources */,
 				409D97972A864273007DA114 /* AppDelegate.swift in Sources */,
@@ -341,7 +357,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = M7D3GWZL49;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = GHFollowers/Info.plist;
+				INFOPLIST_FILE = GHFollowers/Support/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
@@ -368,7 +384,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = M7D3GWZL49;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = GHFollowers/Info.plist;
+				INFOPLIST_FILE = GHFollowers/Support/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
