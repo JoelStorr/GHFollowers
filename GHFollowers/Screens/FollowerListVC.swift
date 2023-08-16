@@ -19,7 +19,20 @@ class FollowerListVC: UIViewController {
         navigationController?.isNavigationBarHidden = false
         navigationController?.navigationBar.prefersLargeTitles = true
         
-        NetworkManager.shared.getFollowers(for: username, page: 1) { followers, errorMessage in
+        NetworkManager.shared.getFollowers(for: username, page: 1) { result in
+            
+            switch result {
+            case .success(let followers):
+                print("Followers.count = \(followers.count)")
+                print(followers)
+            case .failure(let error):
+                self.presentGFAlertOnMainThread(title: "Bad stuff happend", message: error.rawValue, buttonTitle: "Ok")
+            }
+            
+            
+            
+            
+            /*
             guard let followers = followers else {
                 self.presentGFAlertOnMainThread(title: "Bad stuff happend", message: errorMessage!.rawValue, buttonTitle: "Ok")
                 return
@@ -27,6 +40,7 @@ class FollowerListVC: UIViewController {
             
             print("Followers.count = \(followers.count)")
             print(followers)
+            */
         }
         
         
