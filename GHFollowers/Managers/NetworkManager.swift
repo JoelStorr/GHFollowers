@@ -32,8 +32,25 @@ class NetworkManager{
             
             
             guard let respnse = response as? HTTPURLResponse, respnse.statusCode == 200 else {
-                
+                completed(nil, "Invalid response from the server. Please try again.")
+                return
             }
+            
+            guard let data = data else {
+                completed(nil, "The data resieved from the server was invalid, please try again")
+                return
+            }
+            
+            do{
+                let decoder = JSONDecoder()
+                decoder.keyDecodingStrategy = .convertFromSnakeCase
+                let followers = try decoder.decode([Follower].self, from: data)
+                completed(followers, nil)
+            }catch{
+                completed(nil, "The data resieved from the server was invalid, please try again")
+            }
+            
+            
             
         }
         
