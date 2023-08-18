@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		4044A99E2A8C114500141458 /* UIViewController+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4044A99D2A8C114500141458 /* UIViewController+Ext.swift */; };
 		40524A542A8BB0EE00383907 /* GFAlertVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40524A532A8BB0ED00383907 /* GFAlertVC.swift */; };
+		40710EB22A8F5B26007BB2F2 /* UIHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40710EB12A8F5B26007BB2F2 /* UIHelper.swift */; };
 		4088C0742A87833400A0EFB6 /* GFButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4088C0732A87833400A0EFB6 /* GFButton.swift */; };
 		4088C0762A87884400A0EFB6 /* GFtexField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4088C0752A87884400A0EFB6 /* GFtexField.swift */; };
 		409D97972A864273007DA114 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 409D97962A864273007DA114 /* AppDelegate.swift */; };
@@ -31,6 +32,7 @@
 /* Begin PBXFileReference section */
 		4044A99D2A8C114500141458 /* UIViewController+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Ext.swift"; sourceTree = "<group>"; };
 		40524A532A8BB0ED00383907 /* GFAlertVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GFAlertVC.swift; sourceTree = "<group>"; };
+		40710EB12A8F5B26007BB2F2 /* UIHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIHelper.swift; sourceTree = "<group>"; };
 		4088C0732A87833400A0EFB6 /* GFButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GFButton.swift; sourceTree = "<group>"; };
 		4088C0752A87884400A0EFB6 /* GFtexField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GFtexField.swift; sourceTree = "<group>"; };
 		409D97932A864273007DA114 /* GHFollowers.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GHFollowers.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -158,6 +160,7 @@
 			isa = PBXGroup;
 			children = (
 				40F772432A8D0C2D0002D6EF /* ErrorMessage.swift */,
+				40710EB12A8F5B26007BB2F2 /* UIHelper.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -245,6 +248,7 @@
 				4088C0762A87884400A0EFB6 /* GFtexField.swift in Sources */,
 				4088C0742A87833400A0EFB6 /* GFButton.swift in Sources */,
 				4044A99E2A8C114500141458 /* UIViewController+Ext.swift in Sources */,
+				40710EB22A8F5B26007BB2F2 /* UIHelper.swift in Sources */,
 				40F772492A8D24790002D6EF /* GFAvatarImageView.swift in Sources */,
 				409D97AB2A867B76007DA114 /* SearchVC.swift in Sources */,
 				40524A542A8BB0EE00383907 /* GFAlertVC.swift in Sources */,
