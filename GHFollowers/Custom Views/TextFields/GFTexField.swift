@@ -7,7 +7,7 @@
 
 import UIKit
 
-class GFtexField: UITextField {
+class GFTexField: UITextField {
 
     override init(frame: CGRect) {
         super.init(frame: frame)
