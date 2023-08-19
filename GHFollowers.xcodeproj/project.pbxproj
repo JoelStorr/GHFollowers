@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		4044A99E2A8C114500141458 /* UIViewController+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4044A99D2A8C114500141458 /* UIViewController+Ext.swift */; };
+		4044B5492A91192F002AF13E /* UserInfoVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4044B5482A91192F002AF13E /* UserInfoVC.swift */; };
 		40524A542A8BB0EE00383907 /* GFAlertVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40524A532A8BB0ED00383907 /* GFAlertVC.swift */; };
 		40710EB22A8F5B26007BB2F2 /* UIHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40710EB12A8F5B26007BB2F2 /* UIHelper.swift */; };
 		4088C0742A87833400A0EFB6 /* GFButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4088C0732A87833400A0EFB6 /* GFButton.swift */; };
@@ -32,6 +33,7 @@
 
 /* Begin PBXFileReference section */
 		4044A99D2A8C114500141458 /* UIViewController+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Ext.swift"; sourceTree = "<group>"; };
+		4044B5482A91192F002AF13E /* UserInfoVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInfoVC.swift; sourceTree = "<group>"; };
 		40524A532A8BB0ED00383907 /* GFAlertVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GFAlertVC.swift; sourceTree = "<group>"; };
 		40710EB12A8F5B26007BB2F2 /* UIHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIHelper.swift; sourceTree = "<group>"; };
 		4088C0732A87833400A0EFB6 /* GFButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GFButton.swift; sourceTree = "<group>"; };
@@ -73,6 +75,7 @@
 				409D97AA2A867B76007DA114 /* SearchVC.swift */,
 				409D97AC2A867BC5007DA114 /* FavoritesListVC.swift */,
 				40BB70312A88D51400E61630 /* FollowerListVC.swift */,
+				4044B5482A91192F002AF13E /* UserInfoVC.swift */,
 			);
 			path = Screens;
 			sourceTree = "<group>";
@@ -313,6 +316,7 @@
 				40BB70322A88D51400E61630 /* FollowerListVC.swift in Sources */,
 				409D97972A864273007DA114 /* AppDelegate.swift in Sources */,
 				409D97992A864273007DA114 /* SceneDelegate.swift in Sources */,
+				4044B5492A91192F002AF13E /* UserInfoVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
