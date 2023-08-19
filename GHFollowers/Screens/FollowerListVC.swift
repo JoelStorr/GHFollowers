@@ -34,6 +34,7 @@ class FollowerListVC: UIViewController {
         configureCollectionView()
         getFollowers(username: username, page: page)
         configureDataSource()
+        print("View is running")
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -166,7 +167,13 @@ extension FollowerListVC: UICollectionViewDelegate {
         let activeArray = isSearching ? filteredFollowers : followers
         let follower = activeArray[indexPath.item]
         
+        print("Hello World")
+        
+        print(follower)
+        
+        
         let destVC = UserInfoVC()
+        destVC.username = follower.login
         let navController = UINavigationController(rootViewController: destVC)
         
         
