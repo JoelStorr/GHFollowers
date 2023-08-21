@@ -11,9 +11,17 @@ class UserInfoVC: UIViewController {
     
     
     var username : String!
+    
+    let headerView = UIView()
+    
+    
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        
+        
         view.backgroundColor = .systemBackground
         let doneButton = UIBarButtonItem(barButtonSystemItem: .done, target: self, action: #selector(dismissVC))
         navigationItem.rightBarButtonItem = doneButton
@@ -30,7 +38,29 @@ class UserInfoVC: UIViewController {
             }
         }
         
+        layoutUI()
+        
     }
+    
+    
+    func layoutUI(){
+        view.addSubview(headerView)
+        headerView.backgroundColor = .systemPink
+        headerView.translatesAutoresizingMaskIntoConstraints = false
+        
+        
+        NSLayoutConstraint.activate([
+            headerView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor),
+            headerView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 20),
+            headerView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -20),
+            headerView.heightAnchor.constraint(equalToConstant: 180)
+        
+        ])
+    }
+    
+    
+    
+    
     
     @objc func dismissVC(){
         dismiss(animated: true)
