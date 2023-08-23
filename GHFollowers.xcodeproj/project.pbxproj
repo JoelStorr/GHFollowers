@@ -131,6 +131,9 @@
 		408652B92A96541F00FC1D95 /* ItemInfoVC */ = {
 			isa = PBXGroup;
 			children = (
+				408652B32A9641F100FC1D95 /* GFItemInfoVC.swift */,
+				408652B52A9649CE00FC1D95 /* GFRepoItemVC.swift */,
+				408652B72A96538D00FC1D95 /* GFFollowerItemVC.swift */,
 			);
 			path = ItemInfoVC;
 			sourceTree = "<group>";
@@ -221,9 +224,6 @@
 				408652B92A96541F00FC1D95 /* ItemInfoVC */,
 				40524A532A8BB0ED00383907 /* GFAlertVC.swift */,
 				402E685B2A9200170058643D /* GFUserInfoHeaderVC.swift */,
-				408652B32A9641F100FC1D95 /* GFItemInfoVC.swift */,
-				408652B52A9649CE00FC1D95 /* GFRepoItemVC.swift */,
-				408652B72A96538D00FC1D95 /* GFFollowerItemVC.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
