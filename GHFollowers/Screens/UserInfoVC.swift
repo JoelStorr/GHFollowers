@@ -7,6 +7,14 @@
 
 import UIKit
 
+protocol UserInfoVCDelegate: AnyObject {
+    func didTapGitHubProfile()
+    func didTapGetFollowers()
+}
+
+
+
+
 class UserInfoVC: UIViewController {
     
     
@@ -115,4 +123,17 @@ class UserInfoVC: UIViewController {
     }
    
 
+}
+
+
+extension UserInfoVC: UserInfoVCDelegate{
+    func didTapGitHubProfile() {
+        <#code#>
+    }
+    
+    func didTapGetFollowers() {
+        <#code#>
+    }
+    
+    
 }
