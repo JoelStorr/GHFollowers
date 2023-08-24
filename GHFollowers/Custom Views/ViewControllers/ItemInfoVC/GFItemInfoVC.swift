@@ -35,6 +35,9 @@ class GFItemInfoVC: UIViewController {
     }
     
     
+    
+    
+    
     func configureBackgroundView(){
         view.layer.cornerRadius = 18
         view.backgroundColor = .secondarySystemBackground
@@ -48,6 +51,17 @@ class GFItemInfoVC: UIViewController {
         
         stackView.addArrangedSubview(itemInfoViewOne)
         stackView.addArrangedSubview(itemInfoViewTwo)
+    }
+    
+    
+    private func configureActionButton(){
+        actionButton.addTarget(self, action: #selector(actionButtonTapped), for: .touchUpInside)
+    }
+    
+    
+    
+    @objc func actionButtonTapped(){
+        
     }
     
     
