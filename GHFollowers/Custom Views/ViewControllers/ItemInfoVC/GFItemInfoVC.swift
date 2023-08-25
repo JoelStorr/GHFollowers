@@ -32,6 +32,7 @@ class GFItemInfoVC: UIViewController {
         configureBackgroundView()
         layoutUI()
         configureStackView()
+        configureActionButton()
     }
     
     
@@ -60,9 +61,7 @@ class GFItemInfoVC: UIViewController {
     
     
     
-    @objc func actionButtonTapped(){
-        
-    }
+    @objc func actionButtonTapped(){}
     
     
     

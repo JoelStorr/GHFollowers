@@ -6,10 +6,11 @@
 //
 
 import UIKit
+import SafariServices
 
 protocol UserInfoVCDelegate: AnyObject {
-    func didTapGitHubProfile()
-    func didTapGetFollowers()
+    func didTapGitHubProfile(for user: User)
+    func didTapGetFollowers(for user: User)
 }
 
 
@@ -139,13 +140,14 @@ class UserInfoVC: UIViewController {
 
 
 extension UserInfoVC: UserInfoVCDelegate{
-    func didTapGitHubProfile() {
-        //Show Safari View Controller
+    func didTapGitHubProfile(for user: User) {
+        guard let url = URL(string: user.htmlUrl) else{
+            presentGFAlertOnMainThread(title: "Invalid URL", message: "The url atteched to this user is invalid", buttonTitle: "OK")
+        }
     }
     
-    func didTapGetFollowers() {
-        //dismsissvc
-        //tell follower list screen the new user
+    func didTapGetFollowers(for user: User) {
+        <#code#>
     }
     
     
