@@ -20,6 +20,7 @@ class UserInfoVC: UIViewController {
     
     
     var username : String!
+    weak var delegate: FollowerListVCDelegate!
     
     let headerView = UIView()
     let itemViewOne = UIView()
@@ -142,7 +143,8 @@ class UserInfoVC: UIViewController {
 extension UserInfoVC: UserInfoVCDelegate{
     func didTapGitHubProfile(for user: User) {
         guard let url = URL(string: user.htmlUrl) else {
-            return presentGFAlertOnMainThread(title: "Invalid URL", message: "The url atteched to this user is invalid", buttonTitle: "OK")
+            presentGFAlertOnMainThread(title: "Invalid URL", message: "The url atteched to this user is invalid", buttonTitle: "OK")
+            return
         }
         
         presentSafariVC(with: url)
@@ -151,6 +153,13 @@ extension UserInfoVC: UserInfoVCDelegate{
     
     func didTapGetFollowers(for user: User) {
         
+        guard user.followers != 0 else {
+            presentGFAlertOnMainThread(title: "No followers", message: "This user has no followers. What a shame 😞", buttonTitle: "So sad")
+            return
+        }
+        
+        delegate.didRequestFollowers(for: user.login)
+        dismissVC()
     }
     
     
