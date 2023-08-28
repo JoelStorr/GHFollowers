@@ -138,16 +138,21 @@ class UserInfoVC: UIViewController {
 
 }
 
-
+//Adding Safari View Controller to the Project
 extension UserInfoVC: UserInfoVCDelegate{
     func didTapGitHubProfile(for user: User) {
-        guard let url = URL(string: user.htmlUrl) else{
-            presentGFAlertOnMainThread(title: "Invalid URL", message: "The url atteched to this user is invalid", buttonTitle: "OK")
+        guard let url = URL(string: user.htmlUrl) else {
+            return presentGFAlertOnMainThread(title: "Invalid URL", message: "The url atteched to this user is invalid", buttonTitle: "OK")
         }
+        
+        
+        let safariVC = SFSafariViewController(url: url)
+        safariVC.preferredControlTintColor = .systemGreen
+        present(safariVC, animated: true)
     }
     
     func didTapGetFollowers(for user: User) {
-        <#code#>
+        
     }
     
     
