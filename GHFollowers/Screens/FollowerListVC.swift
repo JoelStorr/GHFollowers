@@ -53,6 +53,9 @@ class FollowerListVC: UIViewController {
        view.backgroundColor = .systemBackground
        navigationController?.isNavigationBarHidden = false
        navigationController?.navigationBar.prefersLargeTitles = true
+       
+       let addButton = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(addButtonTapped))
+       navigationItem.rightBarButtonItem = addButton
     }
     
     
@@ -145,8 +148,20 @@ class FollowerListVC: UIViewController {
         }
     }
     
+    //Add user to favorite
+    @objc func addButtonTapped(){
+        print("Add Button Tapped")
+    }
+    
+    
+    
+    
 
 }
+
+
+
+
 
 
 //Extension for Pagination
