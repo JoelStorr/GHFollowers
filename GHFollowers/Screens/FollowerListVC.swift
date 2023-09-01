@@ -32,6 +32,18 @@ class FollowerListVC: UIViewController {
     var dataSource: UICollectionViewDiffableDataSource<Section, Follower>!
     
     
+    init(username: String){
+        super.init(nibName: nil, bundle: nil)
+        self.username = username
+        title = username
+    }
+    
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         configureViewController()
@@ -39,13 +51,13 @@ class FollowerListVC: UIViewController {
         configureCollectionView()
         getFollowers(username: username, page: page)
         configureDataSource()
-        print("View is running")
+        //print("View is running")
     }
+    
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         navigationController?.setNavigationBarHidden(false, animated: true)
-
     }
     
     
@@ -53,7 +65,6 @@ class FollowerListVC: UIViewController {
        view.backgroundColor = .systemBackground
        navigationController?.isNavigationBarHidden = false
        navigationController?.navigationBar.prefersLargeTitles = true
-       
        let addButton = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(addButtonTapped))
        navigationItem.rightBarButtonItem = addButton
     }
@@ -65,7 +76,6 @@ class FollowerListVC: UIViewController {
         collectionView.delegate = self
         collectionView.backgroundColor = .systemBackground
         collectionView.register(FollowerCell.self, forCellWithReuseIdentifier: FollowerCell.reuseID)
-        
     }
     
     
@@ -77,8 +87,6 @@ class FollowerListVC: UIViewController {
         navigationItem.searchController = searchController
     }
     
-    
-
     
     func getFollowers(username:String, page: Int){
         
@@ -106,15 +114,11 @@ class FollowerListVC: UIViewController {
                         return
                     }
                 }
-                
-                
                 self.updateData(on: self.followers)
             case .failure(let error):
                 self.presentGFAlertOnMainThread(title: "Bad stuff happend", message: error.rawValue, buttonTitle: "Ok")
             }
-            
         }
-
             /*
              Old way of handling the Network Data
             guard let followers = followers else {
@@ -137,6 +141,7 @@ class FollowerListVC: UIViewController {
         })
     }
     
+    
     //Creates a new Snapshot of Data to compare against
     func updateData(on followers:  [Follower]){
         var snapshot = NSDiffableDataSourceSnapshot<Section, Follower>()
@@ -147,6 +152,7 @@ class FollowerListVC: UIViewController {
             self.dataSource.apply(snapshot, animatingDifferences: true)
         }
     }
+    
     
     //Add user to favorite
     @objc func addButtonTapped(){
@@ -170,14 +176,9 @@ class FollowerListVC: UIViewController {
                     }
                     self.presentGFAlertOnMainThread(title: "Something went wront", message: error.rawValue, buttonTitle: "OK")
                 }
-                
-                
-                
             case .failure(let error) :
                 self.presentGFAlertOnMainThread(title: "Something went wrong", message: error.rawValue, buttonTitle: "Ok")
             }
-            
-                    
         }
     }
     
