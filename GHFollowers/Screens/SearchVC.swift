@@ -36,14 +36,14 @@ class SearchVC: UIViewController {
         
         //Makes sure the Nav bar stays hidden
         navigationController?.setNavigationBarHidden(false, animated: true)
-
     }
     
+    
     func createDismissKeyboardTapGesture (){
-        let tap = UITapGestureRecognizer(target: self.view, action: #selector(UIView.endEditing))
+        let tap = UITapGestureRecognizer(target: view, action: #selector(UIView.endEditing))
         view.addGestureRecognizer(tap)
-        
     }
+    
     
     @objc func pushFollowerListVC(){
         
@@ -56,11 +56,7 @@ class SearchVC: UIViewController {
         followerListVC.title = usernameTextField.text
         
         navigationController?.pushViewController(followerListVC, animated: true)
-        
     }
-    
-    
-    
     
     
     func configureLogoImageView(){
@@ -76,13 +72,10 @@ class SearchVC: UIViewController {
         logoImageViewTopConstraint.isActive = true
         
         NSLayoutConstraint.activate([
-           
             logoImageView.centerXAnchor.constraint(equalTo: view.centerXAnchor),
             logoImageView.heightAnchor.constraint(equalToConstant: 200),
             logoImageView.widthAnchor.constraint(equalToConstant: 200)
-            
         ])
-        
     }
     
     
@@ -97,7 +90,6 @@ class SearchVC: UIViewController {
             usernameTextField.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 50),
             usernameTextField.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -50),
             usernameTextField.heightAnchor.constraint(equalToConstant: 50)
-        
         ])
     }
     
@@ -107,7 +99,6 @@ class SearchVC: UIViewController {
         
         callToActionButton.addTarget(self, action: #selector(pushFollowerListVC), for: .touchUpInside)
         
-        
         NSLayoutConstraint.activate([
             callToActionButton.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor, constant: -50),
             callToActionButton.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 50),
@@ -115,9 +106,6 @@ class SearchVC: UIViewController {
             callToActionButton.heightAnchor.constraint(equalToConstant: 50)
         ])
     }
-
-    
-
 }
 
 
