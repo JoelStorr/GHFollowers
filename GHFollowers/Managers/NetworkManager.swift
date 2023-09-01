@@ -14,11 +14,10 @@ class NetworkManager{
     let cache = NSCache<NSString, UIImage>()
     
     private init(){}
-    
+
     
     func getFollowers(for username: String, page: Int, completed: @escaping(Result<[Follower], GFError>)->Void){
         let endpoint = baseUrl + "\(username)/followers?per_page=100&page=\(page)"
-        
         
         guard let url = URL(string: endpoint) else {
             completed(.failure(.invalidUsername))
@@ -50,13 +49,8 @@ class NetworkManager{
             }catch{
                 completed(.failure(.invalidData))
             }
-            
-            
-            
         }
-        
         task.resume()
-        
     }
     
     func getUserInfo(for username: String, completed: @escaping(Result<User, GFError>)->Void){
@@ -74,7 +68,6 @@ class NetworkManager{
                 completed(.failure(.unableToComplete))
             }
             
-            
             guard let respnse = response as? HTTPURLResponse, respnse.statusCode == 200 else {
                 completed(.failure(.invalidResponse))
                 return
@@ -88,17 +81,13 @@ class NetworkManager{
             do{
                 let decoder = JSONDecoder()
                 decoder.keyDecodingStrategy = .convertFromSnakeCase
+                decoder.dateDecodingStrategy = .iso8601
                 let user = try decoder.decode(User.self, from: data)
                 completed(.success(user))
             }catch{
                 completed(.failure(.invalidData))
             }
-            
-            
-            
         }
-        
         task.resume()
-        
     }
 }
