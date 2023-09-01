@@ -38,10 +38,9 @@ class GFTexField: UITextField {
         
         backgroundColor = .tertiarySystemBackground
         autocorrectionType = .no
-        
-        placeholder = "Enter a username"
-        
         returnKeyType = .go
+        clearButtonMode = .whileEditing
+        placeholder = "Enter a username"
         
     }
     
