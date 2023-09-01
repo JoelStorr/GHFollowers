@@ -34,6 +34,8 @@ class SearchVC: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
+        usernameTextField.text = ""
+        
         //Makes sure the Nav bar stays hidden
         navigationController?.setNavigationBarHidden(false, animated: true)
     }
@@ -50,6 +52,8 @@ class SearchVC: UIViewController {
         guard isUserNameEntered else {
             presentGFAlertOnMainThread(title: "Empty Username", message: "Pleas enter a username, we need to know who to look for 😀.", buttonTitle: "Ok")
             return }
+        
+        usernameTextField.resignFirstResponder()
         
         let followerListVC = FollowerListVC()
         followerListVC.username = usernameTextField.text
