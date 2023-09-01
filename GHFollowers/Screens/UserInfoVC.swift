@@ -7,17 +7,13 @@
 
 import UIKit
 
-
 protocol UserInfoVCDelegate: AnyObject {
     func didTapGitHubProfile(for user: User)
     func didTapGetFollowers(for user: User)
 }
 
 
-
-
 class UserInfoVC: UIViewController {
-    
     
     var username : String!
     weak var delegate: FollowerListVCDelegate!
@@ -32,11 +28,9 @@ class UserInfoVC: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         configureViewController()
         layoutUI()
         getUserInfo()
-        
     }
     
     
@@ -45,6 +39,7 @@ class UserInfoVC: UIViewController {
         let doneButton = UIBarButtonItem(barButtonSystemItem: .done, target: self, action: #selector(dismissVC))
         navigationItem.rightBarButtonItem = doneButton
     }
+    
     
     func getUserInfo(){
         NetworkManager.shared.getUserInfo(for: username) {[weak self] result in
@@ -57,19 +52,15 @@ class UserInfoVC: UIViewController {
                 self.presentGFAlertOnMainThread(title: "Something went wrong.", message: error.rawValue, buttonTitle: "OK")
             }
         }
-        
-        
     }
     
     
     func configureUIElements(with user: User){
-        
         let repoItemVC = GFRepoItemVC(user: user)
         repoItemVC.delegate = self
         
         let followerItemVC = GFFollowerItemVC(user: user)
         followerItemVC.delegate = self
-
 
         self.add(childVC: repoItemVC, to: self.itemViewOne)
         self.add(childVC: followerItemVC, to: self.itemViewTwo)
@@ -78,12 +69,7 @@ class UserInfoVC: UIViewController {
     }
     
     
-   
-    
-    
-    
     func layoutUI(){
-        
         itemViews = [headerView, itemViewOne, itemViewTwo, dateLabel]
         
         let padding: CGFloat = 20
@@ -94,16 +80,10 @@ class UserInfoVC: UIViewController {
             itemView.translatesAutoresizingMaskIntoConstraints = false
             
             NSLayoutConstraint.activate([
-                
                 itemView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: padding),
                 itemView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -padding),
-            
             ])
-            
-            
         }
-        
-        
         
         NSLayoutConstraint.activate([
             headerView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor),
@@ -117,7 +97,6 @@ class UserInfoVC: UIViewController {
             
             dateLabel.topAnchor.constraint(equalTo: itemViewTwo.bottomAnchor, constant: padding),
             dateLabel.heightAnchor.constraint(equalToConstant: 18)
-            
         ])
     }
     
@@ -130,13 +109,9 @@ class UserInfoVC: UIViewController {
     }
     
     
-    
-    
     @objc func dismissVC(){
         dismiss(animated: true)
     }
-   
-
 }
 
 //Adding Safari View Controller to the Project
@@ -146,21 +121,16 @@ extension UserInfoVC: UserInfoVCDelegate{
             presentGFAlertOnMainThread(title: "Invalid URL", message: "The url atteched to this user is invalid", buttonTitle: "OK")
             return
         }
-        
         presentSafariVC(with: url)
-
     }
     
+    
     func didTapGetFollowers(for user: User) {
-        
         guard user.followers != 0 else {
             presentGFAlertOnMainThread(title: "No followers", message: "This user has no followers. What a shame 😞", buttonTitle: "So sad")
             return
         }
-        
         delegate.didRequestFollowers(for: user.login)
         dismissVC()
     }
-    
-    
 }
