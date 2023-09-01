@@ -9,9 +9,7 @@ import UIKit
 
 class GFUserInfoHeaderVC: UIViewController {
 
-    
     var user: User!
-    
     
     let avatarImageView = GFAvatarImageView(frame: .zero)
     let usernameLabel = GFTitleLabel(textAlignment: .left, fontSize: 34)
@@ -26,10 +24,10 @@ class GFUserInfoHeaderVC: UIViewController {
         self.user = user
     }
     
+    
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
-    
     
     
     override func viewDidLoad() {
@@ -37,8 +35,8 @@ class GFUserInfoHeaderVC: UIViewController {
         addSubviews()
         layoutUI()
         configureUIElements()
-        
     }
+    
     
     func configureUIElements() {
         avatarImageView.downloadImage(from: user.avatarUrl)
@@ -52,6 +50,7 @@ class GFUserInfoHeaderVC: UIViewController {
         locationImageView.tintColor = .secondaryLabel
     }
     
+    
     func addSubviews(){
         view.addSubview(avatarImageView)
         view.addSubview(usernameLabel)
@@ -61,6 +60,7 @@ class GFUserInfoHeaderVC: UIViewController {
         view.addSubview(bioLabel)
     }
 
+    
     func layoutUI() {
         let padding: CGFloat            = 20
         let textImagePadding: CGFloat   = 12
@@ -98,5 +98,4 @@ class GFUserInfoHeaderVC: UIViewController {
             bioLabel.heightAnchor.constraint(equalToConstant: 60)
         ])
     }
-
 }

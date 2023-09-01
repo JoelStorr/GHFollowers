@@ -19,6 +19,7 @@ class FavoriteCell: UITableViewCell {
         configure()
     }
     
+    
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
@@ -49,9 +50,4 @@ class FavoriteCell: UITableViewCell {
             usernameLabel.heightAnchor.constraint(equalToConstant: 40)
         ])
     }
-    
-    
-    
-    
-
 }

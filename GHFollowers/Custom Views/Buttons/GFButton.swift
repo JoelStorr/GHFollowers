@@ -21,13 +21,11 @@ class GFButton: UIButton {
     }
     
     
-    init(backgroundColor: UIColor, title: String){
-        super.init(frame: .zero)
+     convenience init(backgroundColor: UIColor, title: String){
+        self.init(frame: .zero)
         self.backgroundColor = backgroundColor
         self.setTitle(title, for: .normal)
-        configure()
     }
-    
     
     
     private func configure(){
@@ -36,7 +34,6 @@ class GFButton: UIButton {
         titleLabel?.font = UIFont.preferredFont(forTextStyle: .headline)
         //When you create you own component, this enables autolayout
         translatesAutoresizingMaskIntoConstraints = false
-        
     }
     
     
@@ -44,6 +41,4 @@ class GFButton: UIButton {
         self.backgroundColor = backgroundColor
         setTitle(title, for: .normal)
     }
-    
-    
 }

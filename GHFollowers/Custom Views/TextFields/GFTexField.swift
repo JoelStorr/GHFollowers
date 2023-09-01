@@ -20,8 +20,6 @@ class GFTexField: UITextField {
         fatalError("init(coder:) has not been implemented")
     }
     
-    
-    
     private func configure(){
         translatesAutoresizingMaskIntoConstraints = false
         
@@ -43,6 +41,4 @@ class GFTexField: UITextField {
         placeholder = "Enter a username"
         
     }
-    
-    
 }

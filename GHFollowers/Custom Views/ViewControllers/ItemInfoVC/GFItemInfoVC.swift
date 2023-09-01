@@ -35,14 +35,10 @@ class GFItemInfoVC: UIViewController {
         configureActionButton()
     }
     
-    
-    
-    
-    
+
     func configureBackgroundView(){
         view.layer.cornerRadius = 18
         view.backgroundColor = .secondarySystemBackground
-        
     }
     
     
@@ -60,19 +56,15 @@ class GFItemInfoVC: UIViewController {
     }
     
     
-    
     @objc func actionButtonTapped(){}
     
-    
-    
-    
+
     private func layoutUI(){
         view.addSubview(stackView)
         view.addSubview(actionButton)
         
         stackView.translatesAutoresizingMaskIntoConstraints = false
         let padding: CGFloat = 20
-        
         
         NSLayoutConstraint.activate([
             stackView.topAnchor.constraint(equalTo: view.topAnchor, constant: padding),
@@ -85,9 +77,5 @@ class GFItemInfoVC: UIViewController {
             actionButton.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -padding),
             actionButton.heightAnchor.constraint(equalToConstant: 44)
         ])
-        
     }
-
-    
-
 }
