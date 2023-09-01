@@ -41,6 +41,7 @@
 		40F772472A8D23A20002D6EF /* FollowerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40F772462A8D23A20002D6EF /* FollowerCell.swift */; };
 		40F772492A8D24790002D6EF /* GFAvatarImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40F772482A8D24790002D6EF /* GFAvatarImageView.swift */; };
 		40FAC3F42AA1D10800EF1025 /* GFTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40FAC3F32AA1D10800EF1025 /* GFTabBarController.swift */; };
+		40FAC3F62AA1DD4900EF1025 /* GFAlertContainerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40FAC3F52AA1DD4900EF1025 /* GFAlertContainerView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -80,6 +81,7 @@
 		40F772462A8D23A20002D6EF /* FollowerCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FollowerCell.swift; sourceTree = "<group>"; };
 		40F772482A8D24790002D6EF /* GFAvatarImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GFAvatarImageView.swift; sourceTree = "<group>"; };
 		40FAC3F32AA1D10800EF1025 /* GFTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GFTabBarController.swift; sourceTree = "<group>"; };
+		40FAC3F52AA1DD4900EF1025 /* GFAlertContainerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GFAlertContainerView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -204,6 +206,7 @@
 			children = (
 				40A2936D2A90A7C00065B552 /* GFEmptyStateView.swift */,
 				405716B02A953ACC001E145A /* GFItemInfoView.swift */,
+				40FAC3F52AA1DD4900EF1025 /* GFAlertContainerView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -370,6 +373,7 @@
 				40F772442A8D0C2D0002D6EF /* GFError.swift in Sources */,
 				402E685C2A9200170058643D /* GFUserInfoHeaderVC.swift in Sources */,
 				40BB70362A88EBA100E61630 /* GFBodyLabel.swift in Sources */,
+				40FAC3F62AA1DD4900EF1025 /* GFAlertContainerView.swift in Sources */,
 				409FCE662A8CA8ED007EAA46 /* Follower.swift in Sources */,
 				40BB70342A88E7C400E61630 /* GFTitleLabel.swift in Sources */,
 				408652BB2A965CE200FC1D95 /* Date+Ext.swift in Sources */,
