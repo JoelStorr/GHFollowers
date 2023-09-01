@@ -42,6 +42,7 @@
 		40F772492A8D24790002D6EF /* GFAvatarImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40F772482A8D24790002D6EF /* GFAvatarImageView.swift */; };
 		40FAC3F42AA1D10800EF1025 /* GFTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40FAC3F32AA1D10800EF1025 /* GFTabBarController.swift */; };
 		40FAC3F62AA1DD4900EF1025 /* GFAlertContainerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40FAC3F52AA1DD4900EF1025 /* GFAlertContainerView.swift */; };
+		40FAC3F82AA1EA5400EF1025 /* GFDataLoadingVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40FAC3F72AA1EA5400EF1025 /* GFDataLoadingVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -82,6 +83,7 @@
 		40F772482A8D24790002D6EF /* GFAvatarImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GFAvatarImageView.swift; sourceTree = "<group>"; };
 		40FAC3F32AA1D10800EF1025 /* GFTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GFTabBarController.swift; sourceTree = "<group>"; };
 		40FAC3F52AA1DD4900EF1025 /* GFAlertContainerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GFAlertContainerView.swift; sourceTree = "<group>"; };
+		40FAC3F72AA1EA5400EF1025 /* GFDataLoadingVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GFDataLoadingVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -241,6 +243,7 @@
 				408652B92A96541F00FC1D95 /* ItemInfoVC */,
 				40524A532A8BB0ED00383907 /* GFAlertVC.swift */,
 				402E685B2A9200170058643D /* GFUserInfoHeaderVC.swift */,
+				40FAC3F72AA1EA5400EF1025 /* GFDataLoadingVC.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -358,6 +361,7 @@
 				408652BD2A965D1300FC1D95 /* String+Ext.swift in Sources */,
 				4088C0742A87833400A0EFB6 /* GFButton.swift in Sources */,
 				4044A99E2A8C114500141458 /* UIViewController+Ext.swift in Sources */,
+				40FAC3F82AA1EA5400EF1025 /* GFDataLoadingVC.swift in Sources */,
 				40710EB22A8F5B26007BB2F2 /* UIHelper.swift in Sources */,
 				408652B42A9641F200FC1D95 /* GFItemInfoVC.swift in Sources */,
 				40CEDE782A934F27009A2007 /* Constants.swift in Sources */,
