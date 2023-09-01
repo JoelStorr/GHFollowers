@@ -80,7 +80,6 @@ extension FavoritesListVC: UITableViewDataSource, UITableViewDelegate {
     }
     
     
-    
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: FavoriteCell.reuseID) as! FavoriteCell
         let favorite = favorites[indexPath.row]
@@ -96,15 +95,13 @@ extension FavoritesListVC: UITableViewDataSource, UITableViewDelegate {
         navigationController?.pushViewController(destVC, animated: true)
     }
     
+    
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         guard editingStyle == .delete else { return }
         
         let favorite = favorites[indexPath.row]
-        
         favorites.remove(at: indexPath.row)
-        
         tableView.deleteRows(at: [indexPath], with: .left)
-        
         
         PersistanceManager.updateWith(favorite: favorite, actionType: .remove) { [weak self]error in
             guard let self = self else { return }
@@ -112,10 +109,6 @@ extension FavoritesListVC: UITableViewDataSource, UITableViewDelegate {
             guard let error  = error else { return }
             
             self.presentGFAlertOnMainThread(title: "Unable to remove", message: error.rawValue, buttonTitle: "Ok")
-            
         }
     }
-   
-    
-    
 }
