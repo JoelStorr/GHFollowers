@@ -7,7 +7,7 @@
 
 import UIKit
 
-struct UIHelper {
+enum UIHelper {
     static func createThreeColumnFlowLayout(in view: UIView)-> UICollectionViewFlowLayout{
         
         //Calculates the width of a cell
