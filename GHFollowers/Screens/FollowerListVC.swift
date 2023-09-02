@@ -82,7 +82,7 @@ class FollowerListVC: GFDataLoadingVC {
     func configureSearchController(){
         let searchController = UISearchController()
         searchController.searchResultsUpdater = self
-        searchController.searchBar.delegate = self
+        //searchController.searchBar.delegate = self
         searchController.searchBar.placeholder = "Search for a username"
         navigationItem.searchController = searchController
     }
@@ -236,9 +236,12 @@ extension FollowerListVC: UICollectionViewDelegate {
 }
 
 //Search Extension
-extension FollowerListVC: UISearchResultsUpdating, UISearchBarDelegate{
+extension FollowerListVC: UISearchResultsUpdating /*, UISearchBarDelegate*/{
     func updateSearchResults(for searchController: UISearchController) {
         guard let filter = searchController.searchBar.text, !filter.isEmpty else{
+            filteredFollowers.removeAll()
+            updateData(on: followers)
+            isSearching = false
             return
         }
         isSearching = true
@@ -246,11 +249,14 @@ extension FollowerListVC: UISearchResultsUpdating, UISearchBarDelegate{
         updateData(on: filteredFollowers)
     }
     
-    
-    func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
-        isSearching = false
-        updateData(on: followers)
-    }
+    //Filter check gets perfomed even if the Cancle Button is clicked
+    // This is not needed
+    /*
+        func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
+            isSearching = false
+            updateData(on: followers)
+        }
+    */
     
 }
 
