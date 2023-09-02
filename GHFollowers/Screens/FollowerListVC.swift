@@ -26,6 +26,7 @@ class FollowerListVC: GFDataLoadingVC {
     var page: Int = 1
     var hasMoreFollowers = true
     var isSearching: Bool = false
+    var isLoadingMoreFollowers = false
     
     
     var collectionView: UICollectionView!
@@ -91,6 +92,8 @@ class FollowerListVC: GFDataLoadingVC {
     func getFollowers(username:String, page: Int){
         
         showLoadingView()
+        isLoadingMoreFollowers = true
+        
         
         NetworkManager.shared.getFollowers(for: username, page: page) { [weak self] result in
             guard let self = self else { return }
@@ -118,6 +121,7 @@ class FollowerListVC: GFDataLoadingVC {
             case .failure(let error):
                 self.presentGFAlertOnMainThread(title: "Bad stuff happend", message: error.rawValue, buttonTitle: "Ok")
             }
+            self.isLoadingMoreFollowers = false
         }
             /*
              Old way of handling the Network Data
@@ -203,9 +207,7 @@ extension FollowerListVC: UICollectionViewDelegate {
         
         
         if offsetY > contentHeight - height{
-            
-            
-            guard hasMoreFollowers else{ return }
+            guard hasMoreFollowers, !isLoadingMoreFollowers else{ return }
             page += 1
             getFollowers(username: username, page: page)
         }
