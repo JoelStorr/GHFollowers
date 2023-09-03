@@ -7,12 +7,14 @@
 
 import UIKit
 
-
+protocol UserInfoVCDelegate: AnyObject {
+    func didRequestFollowers(for username: String)
+}
 
 class UserInfoVC: UIViewController {
     
     var username : String!
-    weak var delegate: FollowerListVCDelegate!
+    weak var delegate: UserInfoVCDelegate!
     
     let headerView = UIView()
     let itemViewOne = UIView()
