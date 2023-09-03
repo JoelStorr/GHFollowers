@@ -8,7 +8,6 @@
 import UIKit
 
 
-
 enum ItemInfoType {
     case repos, gists, followers, following
 }
