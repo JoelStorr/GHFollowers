@@ -17,7 +17,6 @@ enum UIHelper {
         let avalibleWidth = width - (padding * 2) - (minimumItemSpacing * 2)
         let itemWidth = avalibleWidth / 3
         
-        
         //Builds the Layout
         let flowLayout = UICollectionViewFlowLayout()
         flowLayout.sectionInset = UIEdgeInsets(top: padding, left: padding, bottom: padding, right: padding)

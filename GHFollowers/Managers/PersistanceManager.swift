@@ -7,11 +7,9 @@
 
 import Foundation
 
-
 enum PersistanceActionType{
     case add, remove
 }
-
 
 enum PersistanceManager{
     static private let defaults = UserDefaults.standard
@@ -19,7 +17,6 @@ enum PersistanceManager{
     enum Keys{
         static let favorites = "favorites"
     }
-    
     
     static func updateWith(favorite: Follower, actionType: PersistanceActionType, completed: @escaping(GFError?) -> Void){
         retiveFavorites { result in
@@ -63,8 +60,8 @@ enum PersistanceManager{
         }
     }
     
+    
     static func save(favorites: [Follower]) -> GFError? {
-        
         do{
             let encoder = JSONEncoder()
             let encodedFavorites = try encoder.encode(favorites)
@@ -74,8 +71,6 @@ enum PersistanceManager{
             return .unableFavorites
         }
     }
-    
-    
 }
 
 

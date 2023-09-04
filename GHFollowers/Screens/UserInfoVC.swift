@@ -13,7 +13,6 @@ protocol UserInfoVCDelegate: AnyObject {
 
 class UserInfoVC: UIViewController {
     
-    
     let scrollView = UIScrollView()
     let contentView = UIView()
     
@@ -42,6 +41,7 @@ class UserInfoVC: UIViewController {
         navigationItem.rightBarButtonItem = doneButton
     }
     
+    
     //Adding Content to the Scroll View programatically
     func configureScrollView(){
         view.addSubview(scrollView)
@@ -53,7 +53,6 @@ class UserInfoVC: UIViewController {
             contentView.widthAnchor.constraint(equalTo: scrollView.widthAnchor),
             contentView.heightAnchor.constraint(equalToConstant: 600)
         ])
-        
     }
     
     
@@ -134,6 +133,7 @@ extension UserInfoVC: GFRepoItemVCDelegate{
             presentSafariVC(with: url)
     }
 }
+
 
 extension UserInfoVC: GFFollowerItemVCDelegate{
     func didTapGetFollowers(for user: User) {

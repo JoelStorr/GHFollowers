@@ -132,8 +132,8 @@
 			children = (
 				4044A99D2A8C114500141458 /* UIViewController+Ext.swift */,
 				408652BA2A965CE200FC1D95 /* Date+Ext.swift */,
-				408652BC2A965D1300FC1D95 /* String+Ext.swift */,
 				40A9EA162AA475D600ED2226 /* UIView+Ext.swift */,
+				408652BC2A965D1300FC1D95 /* String+Ext.swift */,
 				405FD45A2AA5E32500322350 /* UITableView+Ext.swift */,
 			);
 			path = Extension;
@@ -267,8 +267,8 @@
 		40F772422A8D0C120002D6EF /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
-				40F772432A8D0C2D0002D6EF /* GFError.swift */,
 				40710EB12A8F5B26007BB2F2 /* UIHelper.swift */,
+				40F772432A8D0C2D0002D6EF /* GFError.swift */,
 				40CEDE772A934F27009A2007 /* Constants.swift */,
 			);
 			path = Utilities;

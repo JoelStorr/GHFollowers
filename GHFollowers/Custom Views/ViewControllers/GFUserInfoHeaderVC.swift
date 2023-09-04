@@ -39,7 +39,7 @@ class GFUserInfoHeaderVC: UIViewController {
     
     
     func configureUIElements() {
-        downloadAvatarImage()
+        avatarImageView.downloadImage(fromUrl: user.avatarUrl)
         usernameLabel.text          = user.login
         nameLabel.text              = user.name ?? ""
         locationLabel.text          = user.location ?? "No Location"
@@ -51,16 +51,6 @@ class GFUserInfoHeaderVC: UIViewController {
     }
     
     
-    func downloadAvatarImage(){
-        NetworkManager.shared.downloadImage(from: user.avatarUrl) { [weak self] image in
-            guard let self = self else { return }
-            DispatchQueue.main.async {
-                self.avatarImageView.image = image
-            }
-        }
-    }
-    
-
     func layoutUI() {
         let padding: CGFloat            = 20
         let textImagePadding: CGFloat   = 12

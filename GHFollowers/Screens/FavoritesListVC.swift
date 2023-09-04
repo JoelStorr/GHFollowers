@@ -26,12 +26,12 @@ class FavoritesListVC: GFDataLoadingVC {
     }
     
     
-    
     func configureViewController(){
         view.backgroundColor  = .systemBackground
         title = "Favorites"
         navigationController?.navigationBar.prefersLargeTitles = true
     }
+    
     
     func configureTableView(){
         view.addSubview(tableView)
@@ -54,24 +54,26 @@ class FavoritesListVC: GFDataLoadingVC {
             
             switch result {
             case .success(let favorites):
-                
-                if favorites.isEmpty{
-                    self.showEmptyStateView(with: "No Favorites=\nAdd one on the Follower screen.", in: self.view)
-                }else{
-                    self.favorites = favorites
-                    DispatchQueue.main.async {
-                        self.tableView.reloadData()
-                        self.view.bringSubviewToFront(self.tableView)
-                    }
-                }
-                
+                self.updateUI(with: favorites)
             case .failure(let error):
                 self.presentGFAlertOnMainThread(title: "Something went Wrong", message: error.rawValue, buttonTitle: "OK")
             }
         }
     }
+    
+    
+    func updateUI(with favorites: [Follower]){
+        if favorites.isEmpty{
+            self.showEmptyStateView(with: "No Favorites=\nAdd one on the Follower screen.", in: self.view)
+        }else{
+            self.favorites = favorites
+            DispatchQueue.main.async {
+                self.tableView.reloadData()
+                self.view.bringSubviewToFront(self.tableView)
+            }
+        }
+    }
 }
-
 
 
 extension FavoritesListVC: UITableViewDataSource, UITableViewDelegate {

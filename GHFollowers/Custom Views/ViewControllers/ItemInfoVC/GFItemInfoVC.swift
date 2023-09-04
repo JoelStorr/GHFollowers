@@ -7,13 +7,10 @@
 
 import UIKit
 
-
 protocol ItemInfoVCDelegate: AnyObject {
     func didTapGitHubProfile(for user: User)
     func didTapGetFollowers(for user: User)
 }
-
-
 
 class GFItemInfoVC: UIViewController {
 
@@ -29,6 +26,7 @@ class GFItemInfoVC: UIViewController {
         super.init(nibName: nil, bundle: nil)
         self.user = user
     }
+    
     
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
@@ -53,7 +51,7 @@ class GFItemInfoVC: UIViewController {
     private func configureStackView(){
         stackView.axis = .horizontal
         stackView.distribution = .equalSpacing
-        
+
         stackView.addArrangedSubview(itemInfoViewOne)
         stackView.addArrangedSubview(itemInfoViewTwo)
     }
