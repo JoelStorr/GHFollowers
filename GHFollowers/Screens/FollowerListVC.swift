@@ -211,8 +211,8 @@ class FollowerListVC: GFDataLoadingVC {
         let favorite = Follower(login: user.login, avatarUrl: user.avatarUrl)
         //save user infos
         PersistanceManager.updateWith(favorite: favorite, actionType: .add) {[weak self] error in
-            guard let self = self else { return }
-            guard let error = error else {
+            guard let self else { return }
+            guard let error else {
                 DispatchQueue.main.async {
                     self.presentGFAlert(title: "Success", message: "You added the uswer to your favorites list", buttonTitle: "OK")
                 }
