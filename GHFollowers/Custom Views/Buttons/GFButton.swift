@@ -21,24 +21,30 @@ class GFButton: UIButton {
     }
     
     
-     convenience init(backgroundColor: UIColor, title: String){
+    convenience init(color: UIColor, title: String, systhemImageName: String){
         self.init(frame: .zero)
-        self.backgroundColor = backgroundColor
-        self.setTitle(title, for: .normal)
+        set(color: color, title: title, systhemImageName: systhemImageName)
     }
     
     
     private func configure(){
-        layer.cornerRadius = 10
-        setTitleColor(.white, for: .normal)
-        titleLabel?.font = UIFont.preferredFont(forTextStyle: .headline)
-        //When you create you own component, this enables autolayout
+        configuration = .tinted()
+        configuration?.cornerStyle = .medium
         translatesAutoresizingMaskIntoConstraints = false
     }
     
     
-    func set (backgroundColor: UIColor, title: String){
-        self.backgroundColor = backgroundColor
-        setTitle(title, for: .normal)
+    func set (color: UIColor, title: String, systhemImageName: String){
+        
+        configuration?.baseBackgroundColor = color
+        configuration?.baseForegroundColor = color
+        configuration?.title = title
+        
+        
+        configuration?.image = UIImage(systemName: systhemImageName)
+        configuration?.imagePadding = 6
+        configuration?.imagePlacement = .leading
+        
+        
     }
 }
